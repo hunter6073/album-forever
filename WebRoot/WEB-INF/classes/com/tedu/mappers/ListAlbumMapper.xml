@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+ 
+ 
+ <mapper namespace="com.tedu.dao.ListAlbumDao">
+ 	
+ 	<select id="ListAlbum" parameterType="com.tedu.entity.Album_info" resultMap="AlbumMap">
+ 		select * from albuminfo where 1=1
+ 			<if test="album_language!=null">
+ 				and	language = #{album_language}
+ 			</if>
+ 			<if test="album_style!=null">
+ 				and style = #{album_style}
+ 			</if>
+ 			<if test="album_region!=null">
+ 				and region = #{album_region}
+ 			</if>
+ 			<if test="album_price!=111 and album_price!=200">
+ 				<![CDATA[ and price >= #{album_price} and price < #{album_price}+50]]>
+ 			</if>
+ 			<if test="album_price==200">
+ 				and price >= #{album_price} 
+ 			</if>
+ 			
+ 	</select>
+ 	
+  	<resultMap id="AlbumMap" type="com.tedu.entity.Album_info">
+ 		<result property="album_name" column="albumname"/>
+ 		<result property="album_image" column="albumimage"/>
+ 		<result property="album_singer" column="singer"/>
+ 		<result property="album_albumid" column="albumid"/>
+ 		<result property="album_price" column="price"/>
+ 	</resultMap>
+ </mapper>

@@ -1,0 +1,129 @@
+@CHARSET "UTF-8";
+
+/* ordermanager的css文件 */
+body{
+	height: 100%;
+	border: 1px soild red;
+	background-color:F1F5F8;
+	max-width: 900px;
+	text-align: center;
+	overflow-x:hidden;
+	margin: 0 auto;
+	}
+	
+p{
+		margin:0;
+	    padding:0;
+	}
+	
+table{
+	text-align: center;
+	
+	}
+	
+th{
+
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: rgb(168, 191, 212);
+	font-size: 15px;
+	font-family: Microsoft YaHei, 微软雅黑;
+	color: rgb(94, 124, 160);
+	}
+	
+tr,td{
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: rgb(168, 191, 212);
+	font-family: Microsoft YaHei, 微软雅黑;
+	font-size: 15px;
+	color: rgb(94, 124, 160);
+}
+
+
+input{
+	border: 0;
+	padding: 0;
+	background-color: white;
+	}
+	
+
+div.searche{
+	height: 10%;
+	border: 0;
+	margin: 20px;
+	background-color: F1F5F8;
+	}
+	
+div.detail{
+	height: 40%;
+	border: 0;
+	margin: 20px;
+	background-color: white;
+	height:300px;
+	}
+	
+div.d_lr{
+	width: 100%;
+	border: none;
+	background-color:white;
+	margin: 15px auto;
+	
+	height: 90px;
+	}
+	
+div.d_l{
+	width: 50%;
+	background-color:white;
+	margin: 0;
+	float: left;
+	margin-left:40px;
+	height: 90%;
+	margin-top: 1%;
+	}
+div.d_l table tr th{
+width:20%;
+}
+	
+div.d_r{
+	width: 40%;
+	background-color:white;
+	margin: 0;
+	margin-left:30px;
+	float: left;
+	
+	height: 220px;
+	margin-top: 1%;
+	overflow-y:scroll;
+	}
+
+div.manager{
+	
+	}
+	
+div.allorder{
+	height: 100%;
+	margin: 20px;
+	background-color: white;
+	min-height: 250px;
+	}
+div.box{
+width:100%;
+height:95%;
+overflow-y:scroll;
+
+}
+button.delete{
+	text-align: right;
+	}
+	
+	h2.album_info_tag
+	{
+		font-family:宋体,微软雅黑,Arial;
+		color:#11C2EE;
+		text-align:left;
+		float:left;
+		margin:5px 0 0 0px;
+		width:800px;
+		padding-bottom:10px;
+	}

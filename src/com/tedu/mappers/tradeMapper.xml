@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="com.tedu.dao.trade_manageDao">
+	
+	<select id="getalltrade" resultMap="tradeMap">
+		SELECT orderlist.albumid ,orderlist.receiptid, orderlist.number, albuminfo.albumname ,orderlist.subtotal FROM orderlist,albuminfo WHERE orderlist.albumid = albuminfo.albumid
+	</select>
+	<select id="deletetrade" resultMap="tradeMap">
+		delete from orderlist where receiptid=#{r_id}
+	</select>
+
+	<resultMap id="tradeMap" type="com.tedu.classes.trade">
+		<result property="albumid" column="albumid" />
+		<result property="receiptid" column="receiptid" />
+		<result property="val" column="number" />
+		<result property="albumname" column="albumname" />
+		<result property="price" column="subtotal" />
+		
+	</resultMap>
+
+
+</mapper>
+ 

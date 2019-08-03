@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+ <mapper namespace="com.tedu.dao.UserDAO">
+ 	
+ 	<!-- 1.根据用户邮箱以及密码进行查找 -->
+ 	<select id="findByLogin" resultType="com.edu.entity.User" parameterType="com.edu.entity.User">
+ 		select * from users where mailaddress=#{mailaddress} and password=#{password}
+ 	</select>
+ 	
+ 	<!-- 2.将用户信息插入到数据库中 -->
+ 	<insert id="insertUser" parameterType="com.edu.entity.User">
+ 		insert into users (username,mailaddress,password,lastlogintime,lastloginip,freeze) values(#{username},#{mailaddress},#{password},#{lastLoginTime},#{lastLoginIp},#{freeze})
+ 	</insert>
+ 	
+ 	<!-- 3.根据邮箱地址查找用户 -->
+ 	<select id="findByEmail" resultType="com.edu.entity.User" parameterType="string">
+ 		select * from users where mailaddress=#{email}
+ 	</select>
+ 	
+ 	<!-- 4.更新指定邮箱的用户信息 -->
+ <update id="updateUserByEmail" parameterType="com.edu.entity.User">
+ 		update users set username=#{username}, password=#{password}, lastlogintime=#{lastLoginTime}, lastloginip=#{lastLoginIp}, freeze=#{freeze} where mailaddress=#{mailaddress}
+ 	</update>
+ 	
+ 	<!-- 5.根据昵称查找用户 -->
+ 	<select id="findByName" resultType="com.edu.entity.User" parameterType="string">
+ 		select * from users where username=#{nickName}
+ 	</select>
+ 	
+ 	<!-- 6.新用户注册并在表中新建地址 -->
+ 	<insert id="insertAddressInfo" parameterType="string">
+ 		insert into addressinfo (username) values (#{nickName})
+ 	</insert>
+ 	
+ 	<!-- 7.管理员登录验证方法 -->
+ 	<select id="findByAdminLogin" resultType="com.edu.entity.Employee" parameterType="com.edu.entity.Employee">
+ 		select * from employee where personid=#{personid} and password=#{password}
+ 	</select>
+ 	
+ 	<!-- 弃置方法 -->
+ 	<!--  
+ 	<update id="setSecretKey" parameterType="com.edu.entity.SecretKey">
+ 		update EncryptKey set SecretKey=#{secretKey} , time=#{time} where id=#{id}
+ 	</update>
+ 	
+ 	<select id="getSecretKey" resultType="com.edu.entity.SecretKey">
+ 		select * from EncryptKey where id='1'
+ 	</select>
+ 	-->
+ </mapper>

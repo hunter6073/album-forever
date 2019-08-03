@@ -1,0 +1,158 @@
+@CHARSET "UTF-8";
+
+/* Border styles */
+table {
+	width: 100%;
+	margin: 10px auto 0 auto; border-top-width : 1px;
+
+	
+}
+
+th {
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: rgb(168, 191, 212);
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: rgb(168, 191, 212);
+	font-size: 14px;
+	font-family: Microsoft YaHei, 微软雅黑;
+	color: rgb(94, 124, 160);
+}
+
+/* Alternating background colors */
+tr,td{
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: rgb(168, 191, 212);
+	font-family: Microsoft YaHei, 微软雅黑;
+	font-size: 14px;
+	color: rgb(94, 124, 160);
+}
+.blue{
+   background-color:RGB(211,223,237);
+}
+button{
+width:40px;
+height:20px;
+font-size:10px;
+}
+
+input,.blue input
+{
+ border:none;
+ font-family: Microsoft YaHei, 微软雅黑;
+ font-size: 14px;
+ color: rgb(94, 124, 160);
+ background-color:white;
+ width:75%;
+ 
+}
+.blue input{
+background-color:RGB(211,223,237);
+
+}
+
+
+body
+	{
+		width:890px;
+		margin:0 auto 0 auto;
+		text-align:center;
+	}
+div.main
+	{
+		width:890px;
+		height:100%;
+		float:left;
+		margin:0 auto 0 auto;
+		text-align:center;
+	}
+div.search
+	{
+		width:890px;
+		height:50px;
+		background-color:white;
+		margin:20px auto 0 auto;
+	}
+div.album_info
+	{
+		width:890px;
+		height:350px;
+		background-color:white;
+		float:left;
+		margin:0 0 0 0px;
+	}
+div.album_info_img
+	{
+		width:220px;
+		height:220px;
+		float:left;
+		margin:0 0 0 0;
+	}
+div.album_info_content
+	{
+		width:670px;
+		height:300px;
+		float:left;
+		margin:20px 0 0 0;
+	}
+div.album_list
+	{
+		width:890px;
+		background-color:white;
+		float:left;
+		margin:0 auto;
+		
+		
+	}
+div.box{
+overflow-y:scroll;
+}
+h2.album_info_tag
+	{
+		font-family:宋体,微软雅黑,Arial;
+		color:#11C2EE;
+		text-align:left;
+		float:left;
+		margin:5px 0 0 0px;
+		width:800px;
+	}
+table.album_info_table
+	{
+		list-style:none;
+		margin:0 0 0 0;
+		font-size:15px;
+	}
+#album_info
+	{
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: rgb(168, 191, 212);
+	font-family: Microsoft YaHei, 微软雅黑;
+	font-size: 14px;
+	color: rgb(94, 124, 160);
+	}
+textarea.album_info_intro
+	{
+		float:left;
+		width:670px;
+		height:48px;
+		text-align:left;
+		border-bottom-width: 1px;
+		border-bottom-style: solid;
+		border-bottom-color: rgb(168, 191, 212);
+		font-family: Microsoft YaHei, 微软雅黑;
+		font-size: 14px;
+		color: rgb(94, 124, 160);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

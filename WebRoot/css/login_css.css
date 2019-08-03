@@ -1,0 +1,337 @@
+@CHARSET "UTF-8";
+
+body,h1,h2,h3,p,ol,ul,dl,dd {
+	margin: 0;
+	padding: 0;
+	font-size: 12px;
+	-moz-user-select: none; /*火狐*/
+	-webkit-user-select: none; /*webkit浏览器*/
+	-ms-user-select: none; /*IE10*/
+	-khtml-user-select: none; /*早期浏览器*/
+	user-select: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+img {
+	border: none;
+}
+
+li {
+	list-style: none;
+}
+
+html {
+	font-family: "Microsoft Yahei";
+}
+
+body {
+	background: #ffffff;
+	width: 100%;
+}
+
+.head {
+	margin: 12px auto 14px;
+	width: 1200px;
+	height: 90px;
+}
+
+.head img {
+	float: left;
+	margin: 7px 0 0 50px;
+}
+
+#cover {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.44);
+}
+
+#coverShow {
+	display: none;
+	position: fixed;
+	z-index: 2;
+	top: 50%;
+	left: 50%;
+	border: 1px solid #ffffff;
+	width: 250px;
+	height: 100px;
+	margin-left: -150px;
+	margin-top: -150px;
+	background: #ffffff;
+}
+
+.wrap {
+	background: #fff;
+	padding: 15px 25px 15px 15px;
+	float: right;
+	width: 320px;
+	color: #6e6e6e;
+	margin: 45px 50px auto 0;
+	position: relative;
+	border: 1px solid #eef2f4;
+	box-shadow: 0px 1px 2px #eee;
+}
+
+.wrap a,.wrap a:hover {
+	color: #1a66b3;
+}
+
+.wrap .pic {
+	width: 480px;
+	height: 384px;
+	float: left;
+}
+
+.wrap .pic img {
+	width: 480px;
+	height: 384px;
+}
+
+.infro {
+	width: 315px;
+	float: right;
+}
+
+.infro .title {
+	height: 46px;
+	font: normal 14px/ 46px "Microsoft Yahei";
+	color: #666;
+	font-size: 14px;
+}
+
+.infro .username,.infro .password {
+	height: 36px;
+	border: 2px solid #e6e6e6;
+	width: 310px;
+	border-radius: 2px;
+}
+
+.infro .focus,.infro .focus {
+	border: 2px solid #62acdb;
+}
+
+.infro .username {
+	margin-top: 32px;
+	position: relative;
+}
+
+.infro .username span,.infro .password span {
+	width: 35px;
+	margin-right: 1px;
+	height: 36px;
+	float: left;
+	background: url("../images/user.png") 1px no-repeat;
+}
+
+.infro .password span {
+	background-position: 10px -150px;
+	background: url("../images/password.png") 1px no-repeat;
+}
+
+.infro .username input,.infro .password input {
+	float: left;
+	height: 36px;
+	line-height: 34px;
+	border: 0;
+	color: #333;
+	font-family: "Microsoft Yahei";
+	padding: 0px 0px 0px 0px;
+	outline: none;
+}
+
+.infro .username input,.infro .password input {
+	width: 274px;
+}
+
+.tips {
+	height: 30px;
+	line-height: 30px;
+	padding-left: 10px;
+	font-family: "Microsoft Yahei";
+	color: #6e6e6e;
+}
+
+.warn {
+	height: 30px;
+	line-height: 30px;
+	padding-left: 10px;
+	font-family: "Microsoft Yahei";
+	color: #f00000;
+}
+
+.infro .error {
+	border-color: #f44700;
+	border: 1px solid #ff0000;
+}
+
+.password_login {
+	font-size: 18px;
+	color: #3c3c3c;
+	margin-top: 5px;
+}
+
+.infro .btn #submitLoginBtn {
+	width: 100%;
+	border-radius: 5px;
+	color: #fff;
+	display: inline-block;
+	height: 44px;
+	cursor: pointer;
+	text-align: center;
+	font: normal 20px/ 44px "Microsoft Yahei";
+	background: #62acdb;
+}
+
+.infro .btn #submitLoginBtn:hover {
+	background: #6290db;
+	text-decoration: none;
+}
+
+.lostpassword {
+	height: 24px;
+	line-height: 24px;
+	padding-top: 6px;
+}
+
+.lostpassword .lostpassword_btn {
+	float: right;
+	color: #1a66b3;
+}
+
+.lostpassword .lostpassword_btn:hover {
+	color: #1a66b3;
+}
+
+.register {
+	height: 24px;
+	line-height: 24px;
+	padding-top: 6px;
+}
+
+.register .register_btn {
+	float: right;
+	color: #6e6e6e;
+}
+
+.register .register_btn:hover {
+	color: #505050;
+}
+
+.register .other {
+	float: left;
+}
+
+.login_bg {
+	width: 1200px;
+	margin: 0 auto;
+	height: 590px;
+	background: url("../images/login_bg.png") no-repeat;
+}
+
+.login_bg .set_area {
+	width: 1200px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.improve {
+	float: right;
+	margin-top: 34px;
+}
+
+.improve .icon {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	background: url("../images/improve.png") no-repeat 0 0;
+	vertical-align: middle;
+}
+
+.improve .info {
+	color: #787878
+}
+
+#slider {
+	margin: 0 auto;
+	width: 300px;
+	height: 40px;
+	position: relative;
+	border-radius: 2px;
+	background-color: #dae2d0;
+	overflow: hidden;
+	text-align: center;
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+}
+
+#slider_bg {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	background-color: #7AC23C;
+	z-index: 1;
+	border-radius: 2px;
+}
+
+#label {
+	width: 46px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 38px;
+	line-height: 38px;
+	border: 1px solid #cccccc;
+	border-radius: 2px;
+	background: #fff;
+	z-index: 3;
+	cursor: move;
+	color: #62acdb;
+	font-size: 16px;
+	font-weight: 900;
+}
+
+#labelTip {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	font-size: 13px;
+	font-family: 'Microsoft Yahei', serif;
+	line-height: 38px;
+	text-align: center;
+	z-index: 2;
+}
+
+.labelTip {
+	color: #787878;
+}
+
+.slide_warn {
+	color: #F00000;
+}
+
+@media screen and (max-width: 800px) {
+	.login_bg .set_area {
+		width: 350px;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.login_bg .set_area .click_area {
+		display: none;
+	}
+}

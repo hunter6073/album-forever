@@ -1,0 +1,82 @@
+@CHARSET "UTF-8";
+body,.main{
+width:900px;
+height:900px;
+margin:0 auto;
+}
+div.searchholder{
+width:510px;
+height:40px;
+margin:0 auto;
+padding-top:40px;
+}
+
+div.secondary{
+width:900px;
+height:800px;
+margin:20px auto;
+overflow-y:scroll;
+}
+	
+/* Border styles */
+table {
+	width: 100%;
+	margin: 10px auto 0 auto; border-top-width : 1px;
+}
+
+th {
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: rgb(168, 191, 212);
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: rgb(168, 191, 212);
+	font-size: 14px;
+	font-family: Microsoft YaHei, 微软雅黑;
+	color: rgb(94, 124, 160);
+}
+
+/* Alternating background colors */
+tr,td{
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: rgb(168, 191, 212);
+	font-family: Microsoft YaHei, 微软雅黑;
+	font-size: 14px;
+	color: rgb(94, 124, 160);
+}
+.blue{
+   background-color:RGB(211,223,237);
+}
+button{
+width:40px;
+height:20px;
+font-size:10px;
+}
+.first{
+   padding-left:3%;
+   width:19%;
+}
+input,.blue input
+{
+ border:none;
+ font-family: Microsoft YaHei, 微软雅黑;
+ font-size: 16px;
+ width:100%;
+ color: rgb(94, 124, 160);
+ background-color:white;
+}
+.blue input{
+background-color:RGB(211,223,237);
+}
+h2.album_info_tag
+	{
+		font-family:宋体,微软雅黑,Arial;
+		color:#11C2EE;
+		text-align:left;
+		float:left;
+		margin:0;
+		padding-bottom:20px;
+		
+	}
+	

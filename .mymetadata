@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="diskdistribution"
+  id="myeclipse.1497422780456"
+  context-root="/diskdistribution"
+  j2ee-spec="5.0"
+  archive="diskdistribution.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

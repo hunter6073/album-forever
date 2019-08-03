@@ -1,0 +1,237 @@
+div{
+	margin:0;
+	padding:0;
+}
+#body{
+	width:750px;
+	margin:0 auto;
+}
+#address{
+	margin-top:20px;
+}
+#address strong{
+	font-size:14px;
+}
+#letter{
+	margin-top:20px;
+	width:276px;
+	height:116px;
+	background:url(../images/letterBorder_pay.png) no-repeat;
+	cursor:pointer;
+}
+#addressContent{
+	margin:0 auto;
+	padding-left:10px;
+	position:relative;
+	top:8px;
+	width:250px;
+	height:100px;
+	overflow-y:hidden;
+	word-break:break-all;
+	background:#ffffff;
+}
+#addressContent table tr td{
+	font-family:'Microsoft YaHei';
+	font-size:14px;
+}
+#addressContent table tr td label{
+	font-family:'Microsoft YaHei';
+	font-size:10px;
+}
+.mask {
+	display:none;  
+	margin:0 auto;
+	position: absolute;   
+    top: 0%;    
+    left: 0%;    
+    width: 100%;    
+    height: 100%;    
+    background: rgba(0,0,0,0.5);   
+    z-index:10;    
+}
+#closeDiv{
+	width:16px;
+	height:16px;
+	float:right;
+	position:relative;
+	right:20px;
+	top:10px;
+	background:url(../images/close_before_pay.png)
+}
+#closeDiv:hover{
+	background:url(../images/close_after_pay.png)
+}
+#editAddress{
+	 width:580px;
+	 height:370px; 
+	 margin:auto auto;
+	 border:5px outset;
+	 background:#ffffff;
+	 position: absolute; 
+	 left:20%;
+	 right:20%;
+	 top:15%;
+}
+#editDiv{
+	text-align:right;
+	float:right;
+	margin-right:150px;
+	margin-top:50px;
+}
+#labelDiv{
+	width:200px;
+	text-align:right;
+	float:left;
+}
+#addressLabel{
+	position:relative;
+	bottom:45px;
+}
+#addressInput{
+	width:200px;
+	height:60px;
+}
+#receiverInput,#phoneInput,#postalcodeInput{
+	width:200px;
+	height:30px;
+}
+#save{
+	width:50px;
+	height:25px;
+	position:relative;
+	right:20px;
+	cursor:pointer;
+}
+#order{
+	width:99%;
+	margin:0 auto;
+	border:2px outset #FFFFF0;
+}
+#orderTitle{
+	height:20px;
+	margin:20px 0;
+}
+#orderTitle strong{
+	font-size:14px;
+}
+#payTable{
+	width:100%;
+	border-collapse:collapse;
+	text-align:center;
+	
+}
+#payTable thead tr{
+	height:50px;
+}
+#payTable thead tr th{
+	font-size:14px;
+}
+.tr{
+	height:80px;
+	border-top:1px solid #FFFFFF;
+}
+.image{
+	width:65px;
+	height:60px;
+	float:left;
+	margin-left:30px;
+	margin-top:2px;
+}
+#payTable tbody tr td img{
+	width:100%;
+	height:100%;
+}
+#goodName{
+	margin-left:15px;
+	margin-top:4px;
+	float:left;
+	width:170px;
+	height:60px;
+	text-align:left;
+	overflow-y:hidden;
+	word-break:break-all;
+}
+.td1{
+	width:250px;
+}
+.td2{
+	width:130px;
+	text-align:center;
+}
+.td3{
+	width:130px;
+	text-align:center;
+}
+.td4{
+	width:130px;
+	text-align:center;
+}
+.totalTr{
+	height:40px;
+	text-align:right;
+	border-top:1px solid #FFFFFF;
+}
+.totalTr span{
+	position:relative;
+	right:40px;
+	font-size:14px;
+}
+.totalTr span label{
+	font-size:16px;
+	color:red
+}
+#deal{
+	position:relative;
+	margin-top:4px;
+}
+#orderInfo{
+	border:1px solid orange;
+	width:400px;
+	height:120px;
+	text-align:right;
+	font-size:14px;
+	padding-right:10px;
+	margin-right:2px;
+	overflow-y:hidden;
+	word-break:break-all;
+}
+#orderInfo span{
+	position:relative;
+	top:20px;
+	text-align:right;
+	line-height:23px;
+}
+.label{
+	text-align:left;
+	font-size:16px;
+	font-weight:bold;
+}
+#symbol{
+	font-size:20px;
+}
+#totalLabel{
+	font-size:20px;
+	color:red;
+	font-weight:bold;
+}
+#pay{
+	float:right;
+	margin-right:2px;
+}
+#pay span a:hover{
+	color:red;
+}
+#pay span form a{
+	font-size:10px;
+	text-decoration:none;
+	color:#436EEE;
+}
+#pay span form input{
+	width:100px;
+	height:40px;
+	font-size:14px;
+	margin-left:20px;
+	background-color:orange;
+	border:orange;
+	cursor:pointer;
+}

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+ <mapper namespace="com.tedu.dao.personalDao">
+ <!-- 1.查询昵称对应个人信息 -->
+  <select id="findMyInfo" resultType="com.tedu.classes.myInfo" parameterType="String">
+    select * from addressinfo where  username=#{username}  
+ </select>
+ <!-- 2.保存修改个人信息  -->		
+<update id="saveMyInfo" parameterType="com.tedu.classes.myInfo">
+	update addressinfo set phone=#{0},receivename=#{1},postalcode=#{2},address=#{3} where username=#{4}
+</update>
+<!-- 3.查询已购买专辑  -->	
+  <select id="findMyAlbum_receiptid" resultType="com.tedu.classes.myAlbum" parameterType="String">
+     select receiptid from receipt where username=#{username} and status="finished"
+ </select>
+ <select id="findMyAlbum" resultType="com.tedu.classes.myAlbum" parameterType="String">
+     select distinct orderlist.albumid,albuminfo.albumimage,albuminfo.albumname,albuminfo.singer,albuminfo.language,albuminfo.style,albuminfo.region,albuminfo.publishcompany,albuminfo.publishtime,albuminfo.intro from orderlist,albuminfo where receiptid=#{receiptid}
+     and orderlist.albumid=albuminfo.albumid
+ </select>
+ <!-- 4.查询已购买的歌手 -->
+ <select id="findMySinger" resultType="com.tedu.classes.mySinger" parameterType="String">
+ 	select * from singerinfo where name=#{name}
+ </select>
+ <select id="findMySong" resultType="com.tedu.classes.mySinger" parameterType="String">
+ 	select songlist.songname,albuminfo.singer,songlist.song from songlist,albuminfo where songlist.albumid=#{albumid} and songlist.albumid=albuminfo.albumid
+ </select>
+ <!-- 5.查询我的收藏 -->
+ <select id="findMyCollect_albumId" resultType="com.tedu.classes.myCollect" parameterType="String">
+	select albumid from wishlist where username=#{username}
+ </select>
+ <select id="findCollectAlbum" resultType="com.tedu.classes.myCollect" parameterType="String">
+ 	select albumimage,albumid from albuminfo where albumid=#{albumid}
+ </select>
+ <!--6.查询评论  -->
+ <select id="findMyComment" resultType="com.tedu.classes.myComment" parameterType="String">
+ 	select receipt.pdate,orderlist.subtotal,orderlist.receiptid,orderlist.number,orderlist.albumid,albuminfo.albumimage,albuminfo.albumname,albuminfo.singer from receipt  join orderlist on receipt.receiptid=orderlist.receiptid join albuminfo on orderlist.albumid=albuminfo.albumid where receipt.username=#{username} and orderlist.iscomment="0" and receipt.status="finished"
+ </select>
+  <!-- 7.保存评论  -->		
+<insert id="saveMyComment" parameterType="String">
+	insert into comment(username,albumid,rating,comment,receiptid,ctime) values(#{0},#{1},#{2},#{3},#{4},#{5})
+</insert>
+<update id="updateMyComment" parameterType="String">
+	update orderlist set isComment="1" where receiptid=#{0} and albumid=#{1}
+</update>
+<!--8.订单管理  -->
+<select id="findMyReceipt" resultType="com.tedu.classes.myReceiptid" parameterType="String">
+    select receipt.receiptid,receipt.total from receipt where  username=#{username} and status="unfinished" 
+ </select>
+  <select id="findMyReceipt_album" resultType="com.tedu.classes.myReceipt" parameterType="String">
+    select orderlist.albumid,orderlist.number,albuminfo.albumname from orderlist  join albuminfo on albuminfo.albumid=orderlist.albumid where  receiptid=#{receiptid} 
+ </select>
+ <delete id="deleteMyReceipt"  parameterType="String">
+ 	DELETE receipt,orderlist FROM receipt LEFT JOIN orderlist ON receipt.receiptid=orderlist.receiptid WHERE receipt.receiptid=#{receiptid}
+ </delete>
+ </mapper>

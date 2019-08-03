@@ -1,0 +1,115 @@
+@CHARSET "UTF-8";
+/*整体页面样式*/
+body {
+	text-align:center;
+}
+#p_top{
+	width: 1910px;
+	height:380px;
+	background-image:url(../images/bg_profile.jpg);
+}
+#user_data{
+	width:1200px;
+	height:380px;
+	margin:0 auto;
+}
+.menu{
+	width:1200px;
+	height:39px;
+	position:relative;
+	top:341px;
+}
+.menu div{
+	width:150px;
+	float:left;
+	font-weight:bold;
+	color:#ffffff;
+	Cursor:pointer;
+}
+.menu div:hover{
+	color:#6aa84f;
+}
+#cart a{
+	color:#ffffff;
+}
+#cart a:link{
+	color:#ffffff;
+	text-decoration:none;
+}
+#cart a:visited{
+	color:#ffffff;
+	text-decoration:none;
+}
+#cart a:hover{
+	color:#6aa84f;
+	text-decoration:none;
+}
+#cart a:active{
+	color:#ffffff;
+	text-decoration:none;
+}
+.current{
+	color:#6aa84f;
+}
+
+/*我的信息页面样式*/
+.msginput{
+	line-height:30px;
+	width:300px;
+	height:36px;
+	text-align:center;
+	border:none;
+	background:url(../images/line.jpg) no-repeat bottom left;
+	color:#8d653a;
+	font-family:Microsoft YaHei,微软雅黑,Microsoft JhengHei,华文细黑,STHeiti,MingLiu,Verdana, Arial, Helvetica, sans-serif;
+	font-size:15px;
+	-moz-user-select:none;/*火狐*/
+	-webkit-user-select:none;/*webkit浏览器*/
+	-ms-user-select:none;/*IE10*/
+	-khtml-user-select:none;/*早期浏览器*/
+	user-select:none;
+}
+#input{
+	width:420px;
+	height:40px;
+}
+#commentarea{
+	height:100px;
+	overflow:auto;
+}
+.msgsubmit{
+	float:right;
+	border:none;
+	height:28px;
+	width:64px;
+	margin:20px 60px  0 0px;
+}
+#addArea{
+	float:left;
+}
+#contentname{
+	line-height:30px;
+	padding:0;
+	float:left;
+	color:#432914;
+	background:url(../images/nameback.jpg) no-repeat top left;
+	height:36px;
+	width:120px;
+	display:block;
+}
+#commentform{
+	width:500px;
+	height:600px;
+	margin:0 auto;
+}
+.arrow{
+	border-style: solid;
+    border-width: 6px;
+    font-size: 0;
+    height: 0;
+    line-height:0;
+    border-color: #fffff #ffffff #000;
+    box-shadow: 0 1px 0 #fff;
+}
+
+

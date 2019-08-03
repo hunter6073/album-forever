@@ -1,0 +1,483 @@
+
+/* 左侧导航栏*/
+/*清零*/
+body,ul,li,h1,h2,h3,h4,h5,h6,div{margin:0;padding:0;border:0;}
+body{font-size:15px; font-family:Verdana;overflow-x:hidden;}
+ul,ol{list-style-type:none;}
+/*select,input,img{vertical-align:middle;}*/
+a{text-decoration:none;color:black;}
+img{border:none;}
+body,p,span,div,a {
+	text-align: center;
+	font-family: Microsoft JhengHei, Microsoft YaHei, 微软雅黑, 华文细黑, STHeiti,
+		MingLiu, Verdana, Arial, Helvetica, sans-serif;
+	-moz-user-select: none; /*火狐*/
+	-webkit-user-select: none; /*webkit浏览器*/
+	-ms-user-select: none; /*IE10*/
+	-khtml-user-select: none; /*早期浏览器*/
+	user-select: none;
+}
+div.main 
+{
+	background:url(../images/beige_paper.png) left top repeat;
+	width:1920px;
+	height:auto;
+}
+div.ranking_bg
+{
+	width:1920px;
+	height:270px;
+	background-image:url(../images/rank_bg.jpg);
+	 -webkit-filter: grayscale(10%);
+    -moz-filter: grayscale(80%);
+    -ms-filter: grayscale(80%);
+    -o-filter: grayscale(80%);    
+    filter: grayscale(50%);	
+}
+
+@font-face {
+    font-family: 'WebSymbolsRegular';
+    src:url('../images/websymbols.woff');
+    src:url('../images/websymbols.woff') format('woff'),
+        url('../images/websymbols.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+.list{
+	width:400px;
+	height:auto;
+	float:left;
+	margin:100px 0 0 150px;
+	
+}
+.list li{
+	width:350px;
+	margin:0;
+	height:100px;
+	margin-bottom:10px;
+	background:#FFF;
+	box-shadow:1px 1px 2px rgba(0, 0, 0, 0.2);
+	-webkit-transition:0.3s all ease;
+	-moz-transition:0.3s all ease;
+	-ms-transition:0.3s all ease;
+	-o-transition:0.3s all ease;
+	transition:0.3s all ease;
+	overflow:hidden;
+}
+.list li:hover{
+	background:#E1F0FA;
+	box-shadow:1px 1px 3px rgba(0, 0, 0, 0.4);
+
+}
+.list li:hover .text h2{
+	color:#259add;
+	-webkit-animation: moveTop 300ms ease-in-out;
+	-moz-animation: moveTop 300ms ease-in-out;
+	-ms-animation: moveTop 300ms ease-in-out;
+	-o-animation: moveTop 300ms ease-in-out;
+}
+.list li:hover .text h3{
+	color:#000;
+	-webkit-animation: moveBottom 300ms ease-in-out;
+	-moz-animation: moveBottom 300ms ease-in-out;
+	-ms-animation: moveBottom 300ms ease-in-out;
+	-o-animation: moveBottom 300ms ease-in-out;
+}
+.list li:hover .icon{
+	color:#259add;
+	font-size:50px;
+}
+.list li .icon{
+	width:90px;
+	height:90px;
+	margin-left:20px;
+	margin-top:5px;
+	margin-right:20px;
+	float:left;
+	font-size:30px;
+	font-family:'WebSymbolsRegular';
+	line-height:90px;
+	text-align:center;
+	-webkit-transition:0.3s all ease;
+	-moz-transition:0.3s all ease;
+	-ms-transition:0.3s all ease;
+	-o-transition:0.3s all ease;
+	text-shadow:0 0 3px #CCCCCC;
+}
+.text{
+	width:200px;
+	height:auto;
+	float:left;
+	margin-top:29px;
+	height:70px;
+}
+.text h2{
+	font-family:"Microsoft YaHei";
+	color:#999;
+	font-size:30px;
+	font-weight:normal;
+}
+.text h3{
+	font-family:Verdana;
+	font-size:14px;
+	color:#666;
+	font-weight:normal;
+}
+@-webkit-keyframes moveTop {
+    from {
+        opacity: 0;
+        -webkit-transform: translateY(-200%);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    }
+}
+@-moz-keyframes moveTop {
+    from {
+        opacity: 0;
+        -moz-transform: translateY(-200%);
+    }
+    to {
+        opacity: 1;
+        -moz-transform: translateY(0%);
+    }
+}
+@-ms-keyframes moveTop {
+    from {
+        opacity: 0;
+        -ms-transform: translateY(-200%);
+    }
+    to {
+        opacity: 1;
+        -ms-transform: translateY(0%);
+    }
+}
+@-o-keyframes moveTop {
+    from {
+        opacity: 0;
+        -o-transform: translateY(-200%);
+    }
+    to {
+        opacity: 1;
+        -o-transform: translateY(0%);
+    }
+}
+
+@-webkit-keyframes moveBottom {
+    from {
+        opacity: 0;
+        -webkit-transform: translateY(200%);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    }
+}
+@-moz-keyframes moveBottom {
+    from {
+        opacity: 0;
+        -moz-transform: translateY(200%);
+    }
+    to {
+        opacity: 1;
+        -moz-transform: translateY(0%);
+    }
+}
+@-ms-keyframes moveBottom {
+    from {
+        opacity: 0;
+        -ms-transform: translateY(200%);
+    }
+    to {
+        opacity: 1;
+        -ms-transform: translateY(0%);
+    }
+}
+@-o-keyframes moveBottom {
+    from {
+        opacity: 0;
+        -o-transform: translateY(200%);
+    }
+    to {
+        opacity: 1;
+        -o-transform: translateY(0%);
+    }
+}
+
+
+
+
+
+
+div.mod_toplist
+	{
+		width:990px;
+		min-height:400px;
+		float:left;
+		margin:0 0 0 0 ;
+	}
+div.toplist__hd
+	{
+		width:990px;
+		height:64px;
+		float:left;
+		margin-top:30px;
+	}
+h2.toplist__tit
+	{
+		float:left;
+		text-align:left;
+		margin:20px 30px 30px 40px;
+	}
+span.toplist_switch
+	{
+		float:left;
+		font-size:15px;
+		margin:25px 15px 20px 15px;
+	}
+a.toplist__rule
+	{
+		float:left;
+		font-size:10px;
+		margin:25px 0px 20px 0px;
+	}
+
+div.mod_songlist_toolbar
+	{
+		width:990px;
+		height:50px;
+		float:left;
+		margin:0 0 0 40px;
+	}
+	
+input.mod_btn_buy,input.mod_btn_wish,input.mod_btn_addcart,button.mod_btn_buy
+	{
+		float:left;
+		width:130px;
+		height:50px;
+		padding:0px;
+		margin:0 50px 0 0px ;
+		border:thin solid grey;		
+		text-align:center;
+		font-size:15px;
+	}
+a.mod_btn_buy:link,a.mod_btn_wish:link,a.mod_btn_addcart:link,a.mod_btn_js_batch:link
+	{
+		text-decoration:none;
+		color:black;
+	}
+a.mod_btn_buy:visited,a.mod_btn_wish:visited,a.mod_btn_addcart:visited,a.mod_btn_js_batch:visited
+	{
+		text-decoration:none ;
+		color:black;
+	}
+a.mod_btn_buy:hover,a.mod_btn_wish:hover,a.mod_btn_addcart:hover,a.mod_btn_js_batch:hover
+	{
+		text-decoration:none;
+		color:blue;
+		background-color:#ADFF2F;
+		border-color:#ADFF2F;
+	}
+ul.songlist__list
+	{
+		float:left;
+	}
+li.202612961
+	{
+		float:left;
+	}
+div.mod_songlist
+	{
+		width:990px;
+		float:left;
+		margin-top:50px;
+	}
+ul.songlist__header
+	{
+		float:left;
+		width:990px;
+		height:50px;
+	}
+li.songlist__edit,li.songlist__header_name,li.songlist__header_singer,li.songlist__header_time
+	{
+		float:left;
+		font-size:16px;
+		
+	}
+li.songlist__header_name
+	{
+		width:500px;
+		height:50px;
+		margin-left:135px;
+		text-align:left;
+	}
+li.songlist__header_singer
+	{
+		width:150px;
+		height:50px;
+		text-align:left;
+	}
+li.songlist__header_time
+	{
+		width:150px;
+		height:50px;
+		text-align:left;
+	}
+ul.songlist__list
+	{
+		width:990px;
+		min-height:500px;
+	}
+
+li.songlist__info
+	{
+		float:left;
+	}
+div.songlist__item
+	{
+		width:990px;
+		height:90px;
+	}
+	
+div.songlist__edit
+	{
+		float:left;
+		margin-top:40px;
+	}
+div.songlist__number
+	{
+		float:left;
+		width:45px;
+		height:80px;
+		margin:0px 0 0 40px;
+		font-size:50px;
+		font-color:black;
+	}
+div.songlist__songname
+	{
+		width:500px;
+		height:80px;
+		margin-left:50px;
+		float:left;
+	}
+span.songlist__songname_txt
+	{
+		float:left;
+		width:250px;
+		height:80px;
+	}
+a.songlist__cover_album_name
+	{
+		float:left;
+		width:80px;
+		height:80px;
+		
+	}
+a.js_song
+	{
+		float:left;
+		margin:30px 0 0 0px;
+		width:100%px;
+		text-decoration:none;
+	}
+span.icon_txt
+	{
+		float:left;
+	}
+div.mod_list_menu
+	{
+		width:180px;
+		height:80px;
+		float:left;
+	}
+a.list_menu__item_buy,a.list_menu__item_addcart,a.list_menu__item_wish
+	{
+		float:left;
+		margin:30px 0 0 10px;
+		font-size:15px;
+		text-decoration:none;
+	}
+div.songlist__artist
+	{
+		float:left;
+		width:150px;
+		height:80px;
+		text-align:center;
+		
+	}
+a.singer_name
+	{
+		float:left;
+		margin-top:30px;
+	}
+div.songlist__time
+	{
+		float:left;
+		padding:30px 0 0 0;
+	}
+
+img.little_icon
+	{
+		cursor: pointer;
+		transition: all 0.6s;
+	}
+img.little_icon:hover
+	{
+		transform: scale(1.1);
+	}
+
+
+
+
+/* 页码*/
+
+a.js_pageindex,a.js_pageindex_1
+	{
+		float:left;
+		width:30px;
+		height:30px;
+		float:left;
+		font-size:20px;
+		margin-left:10px;
+		font-color:RGB(98,172,219);
+	}
+img.little_icon_shenglv
+	{
+		float:left;
+	}
+a.js_pageindex:link
+	{
+		color:black;
+		text-decoration:none ; 
+	}
+a.js_pageindex:hover
+	{
+		color:white;
+		background-image:url(../images/bg_page.png);
+	}
+div.mod_page_nav_js_pager
+	{
+		width:1200px;
+		height:50px;
+		margin:20px auto 0px auto;
+	}
+
+
+
+#list_menu__item_wish
+	{
+		float:left;
+		margin:30px 0 0 10px;
+		font-size:15px;
+		text-decoration:none;
+	}
+
+
+
+
+
+
+
+
+

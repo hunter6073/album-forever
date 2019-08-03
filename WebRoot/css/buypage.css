@@ -1,0 +1,575 @@
+@CHARSET "UTF-8";
+/* buypage的css文件 */
+
+BODY{
+	text-align: center;
+	width: 100%;
+	min-width: 1200px;
+	margin: 0 auto;
+	overflow-x:hidden;
+	background-color: white;
+	}
+	
+hr{
+	height:5px;
+	width: 100%;
+	margin: 0 auto;
+	border: 0px solid red;
+	padding: 0;
+	background-color: #62acdb;
+	}
+
+div.tal {
+	background-color: white;
+	margin: 0;
+	border: 0px solid red;
+	padding: 0;
+	width: 100%;
+	min-width: 1200px;
+	/*background-image: url("../images/bc019.jpg");*/
+}
+
+
+div.goods {
+	height: 430px;
+	width: 1200px;
+	margin: 0 auto;
+	margin-top:40px;
+	text-align: center;
+	border: 0px solid red;
+	padding: 0px;
+}
+
+div.sp1 {
+	border: 0px solid red;
+	height: 350px;
+	width: 300px;
+	padding: 50px;
+	padding-bottom:0px;
+	float: left;
+}
+
+
+div.sp2 {
+	border: 0px solid red;
+	height: 350px;
+	width: 780px;
+	float: left;
+}
+
+div.albuminformation {
+	border: 0px solid red;
+	padding-top: 10px;
+	height: 180px;
+	width: 780px;
+	float: left;
+	margin: 0 0 1px 0;
+}
+
+h1{
+	margin: 20px 0 40px 0;
+	text-align: left;
+	padding-left: 100px;
+	}
+	
+ul.type{	
+	margin-top: 0px;
+	text-align: left;
+	padding-left: 0px;
+	margin-left: 100px;
+	}
+
+#disalbumid{
+	display: none;
+	}
+
+div.albumprice{
+	height: 30px;
+	margin: 1px 0 1px 0;
+	width:780px;
+	float: left;
+	text-align: left;
+	}
+	
+#price_1{
+	font-family:
+	font-style:oblique;
+	padding-left: 100px;
+}
+	
+#price_2{
+	text-shadow: buttonhighlight;
+	border-bottom-color: black;
+	font-style: oblique;
+	font-family:fantasy;
+	color: red;
+	font-size: 20px;
+}
+
+
+#instore{
+	padding-left: 60px;
+	}
+	
+
+div.mount{
+	height: 75px;
+	margin: 1px 0 1px 0;
+	width:780px;
+	float: left;
+	text-align: left;
+	padding-bottom: 5px;
+	}
+
+#count{
+	height: 30px;
+	margin: 0 5px 0 50px;
+	float: left;
+	font-size: 20px;
+	font-family: cursive;
+	text-align: center;
+	}
+	
+#p_totalprice{
+	float:left;
+	margin-top: 0px;
+	margin-left: 100px;
+	}
+
+label_totalprice{
+	float:left;
+	margin-top: 0px;
+	}
+	
+#totalprice{
+	margin-top: 0px;
+	
+	}
+
+div.albumbuy {
+	border: 0px solid red;
+	height: 70px;
+	width: 780px;
+	float: left;
+}
+
+
+button.buyer{
+	margin: 0 0 0 0;
+	}
+	
+#buyin{
+	margin:0 20px 0 100px;
+	float: left;
+	}
+	
+#songlisttable{
+	margin-bottom: 10px;
+	}
+
+div.otheralbums {
+	height:auto;
+	width: 1200px;
+	margin: 1 auto;
+	text-align: center;
+	border: 0px solid red;
+	padding: 0;
+}
+
+	
+h3.otheralbumstital{
+	margin-bottom: 30px;
+	font-family: Microsoft YaHei;
+	text-align: center;
+	}
+
+div.mod_playlist{
+	width: 1200px;
+	}
+
+div.shangpingpl {
+	/*height: 800px;*/
+	width: 1200px;
+	margin: 1 auto;
+	text-align: center;
+	border: 0px solid red;
+	padding: 0;
+}
+
+
+div.comment_body{
+	/*height: 750px;*/
+	width: 1200px;
+	margin: 0 auto;
+	text-align: center;
+	border: 0px solid red;
+	padding: 0;
+	}
+	
+div.comment_tabs{
+	height: 40px;
+	width: 1200px;
+	margin: 0 auto;
+	text-align: center;
+	border: 0px solid red;
+	padding: 0;
+	}
+	
+div.border{
+	width:1px;
+	height: 50%;
+	background: red;
+	float: right;
+	position: relative;
+	top:25%;
+	border-radius: 1px;
+	}
+	
+div.comment_list{
+	/*height: 710px;*/
+	width: 1200px;
+	margin: 0 auto;
+	text-align: center;
+	/*border: 1px solid black;*/
+	border-top:none;
+	border-bottom:1px solid black;
+	border-left:1px solid black;
+	border-right:1px solid black;
+	padding: 0;
+	padding-top:10px;
+	}
+	
+div.border{
+	display:inline;
+	}
+	
+div.good{
+
+	}
+
+div.bqxinxi {
+	background-color: #333;
+	height: 120px;
+	width: 100%;
+	margin: 0;
+	text-align: center;
+	border: 1px solid #333;
+	padding: 0;
+}
+
+div.c1{
+	border: 1px solid #EEF1F5;
+	}
+	
+input.numberMinus{
+	height: 25px;
+	width:20px;
+	margin: 0 auto;
+	}
+	
+input.numberInput{
+	height: 25px;
+	width:70px;
+	margin: 0 auto;
+	}
+	
+input.numberPlus{
+	height: 25px;
+	width:20px;
+	margin: 0 auto;
+	}
+
+img.denglutubiao {
+	height: 10px;
+	width: 10px;
+}
+
+img.zjm5 {
+	height: 300px;
+	width: 300px;
+}
+
+img.logo {
+	height: 100px;
+	width: 350px;
+}
+
+p.daohanglan {
+	color: red;
+	text-align: center;
+}
+
+p.denglu {
+	font: bold;
+	font-family: '隶书';
+	font-size: 20px;
+	width: 1200px;
+	margin: 0 auto;
+}
+
+p.spfl {
+	color: red;
+	text-align: center;
+}
+
+p.shangping {
+	color: red;
+}
+	
+p.shangpingtuijie {
+	color: red;
+	text-align: center;
+}
+
+div.intal{
+		/*height: 800px;*/
+	width: 1200px;
+	margin: 1 auto;
+	text-align: center;
+	border: 0px solid red;
+	padding: 0;
+	}
+
+div.test000{
+	height:200px;
+	width: 1200px;
+
+	
+	
+	}
+	
+div.test111{
+	width: 200px;
+	height: 200px;
+	}
+	
+div.test222{
+	width: 200px;
+	height: 200px;
+	
+	}
+	
+div.test999{
+	width: 200px;
+	height: 200px;
+	margin: 0 auto;
+	float: left;
+	}
+	
+div.test888{
+	width: 900px;
+	height: 200px;
+	margin-left: 10px;
+	float: right;
+	
+	}
+
+li.playlist__item {
+	
+	text-align:center;
+	display: list-item;	
+	float: left;
+	
+	font-family: poppin, 'PingFang SC', Tahoma, Arial, 微软雅黑, sans-serif;
+	font-size: 14px;
+	
+	height: 250px;
+	width:190px;
+	
+	line-height: 21px;
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: none;
+	margin-bottom: 1px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	
+	padding-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+}
+
+div.playlist__cover mod_cover{
+	width:185px;
+	height: 185px;
+	}
+
+
+
+#image{
+	width: 180px;
+	height: 180px;
+	}
+
+p.bqxinxi{
+	color: #999;
+	}
+	
+p.bqxinxi:hover{
+	color:#31c27c
+	}	
+
+BUTTON {
+	background-color: #31c27c;
+	display: block;
+	height: 48px;
+	line-height: 45px;
+	width: 128px;
+	text-align: center;
+	color: #fff;
+	margin: 0 auto;
+	font-family: 'Microsoft YaHei';
+	font-size: 20px;
+}
+
+ul.playlist__list{
+	height:630px;
+	width: 1200px;
+	margin: 0 auto;
+	padding: 0;
+	}
+
+ul.plfl{
+	height:40px;
+	margin: 0 auto;
+	text-align: center;
+	padding: 0;
+	}
+	
+li{
+	list-style-type: none;
+}
+
+
+
+#li1{
+	width: 100px;
+	height:40px;
+	margin: 0 auto;
+	
+	border-bottom:none;
+	border-left:1px solid black;
+	border-top:1px solid black;
+	border-right:1px solid black;
+	
+	padding: 0;
+	float: left;
+	font: bold;
+	font-family: '仿宋';
+	font-size: 20px;
+	text-align: center;
+	}
+	
+#li2,#li3,#li4{
+	width: 100px;
+	height:40px;
+	margin: 0 auto;
+	border: 1px solid black;
+	border-left:none;
+	border-top:none;
+	border-right:none;
+	padding: 0;
+	float: left;
+	font: bold;
+	font-family: '仿宋';
+	font-size: 20px;
+	text-align: center;
+	}
+	
+#li1:hover,#li2:hover,#li3:hover,#li4:hover{
+	cursor: pointer;
+	}
+	
+#li5{
+	width: 790px;
+	height:40px;
+	margin: 0 auto;
+	border: 1px solid black;
+	border-left:none;
+	border-top:none;
+	border-right:none;
+	padding: 0;
+	float: left;
+	font: bold;
+	font-family: '仿宋';
+	font-size: 20px;
+	text-align: center;
+	}
+	
+a.bqxx{
+	color: #999;
+	}
+	
+a.bqxx:hover{
+	color: 31c27c;
+	}
+	
+#a{
+	text-align: left;
+	padding-bottom:20px; 
+	}
+	
+#b{
+	text-align: left;
+	}
+	
+#c{
+	text-align: right;
+	}
+	
+#lis{
+	display:block;
+	}
+	
+#good{
+	display:none;
+	}
+	
+#mid{
+	display: none;
+	}
+	
+#bad{
+	display:none;
+}
+
+#price_1{
+	font-family:
+	font-style:oblique;
+	padding-left: 100px;
+}
+	
+#price_2{
+	text-shadow: buttonhighlight;
+	border-bottom-color: black;
+	font-style: oblique;
+	font-family:fantasy;
+	color: red;
+	font-size: 20px;
+}
+
+#reserve{
+	display: none;
+	float: right;
+	margin-right: 200px;
+	}
+
+#returnTop:hover{
+	cursor:pointer;
+	background-color: gray;
+	}
+	
+#a_othername{
+	color: black;
+	}
+
+#returnTop{
+	border:1px solid black;
+	background:white;
+	padding:10px;
+	position:fixed;
+	right: 1%;
+	bottom: 15%;
+	}

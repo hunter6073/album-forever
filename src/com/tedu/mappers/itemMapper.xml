@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="com.tedu.dao.item_manageDao">
+	
+	<select id="getallitem" resultMap="itemMap">
+		select * from albuminfo
+	</select>
+	
+	<select id="getitembyId" resultMap="itemMap">
+		select * from albuminfo where albumid = #{value}
+	</select>
+	<select id="insertnewitem" parameterType="com.tedu.classes.item">
+		insert into albuminfo(albumid,albumname,singer,language,style,region,publishcompany,publishtime,intro,price,storage,sold,wished,discount,albumimage)
+		 values(#{albumid},#{albumname},#{singer},#{language},#{style},#{region},#{publishcompany},#{publishtime},#{intro},#{price},#{storage},#{sold},#{wished},#{discount},#{picture})
+	</select>
+	<select id="deleteitem" resultMap="itemMap">
+		delete from albuminfo where albumid=#{albumid}
+	</select>
+	<select id="updateitem" parameterType="com.tedu.classes.item">
+		update albuminfo set albumname=#{albumname},singer=#{singer},language=#{language},style=#{style},region=#{region},
+		publishcompany=#{publishcompany},intro=#{intro},price=#{price},storage=#{storage},sold=#{sold},wished=#{wished},discount=#{discount},albumimage=#{picture}
+		where albumid = #{albumid}
+	</select>
+   	<select id="smartsearchalbum" resultMap="smartsearchMap">
+ 		select * from albuminfo  where albumname like #{value}
+ 	</select>
+ 	<select id="smartsearchsinger" resultMap="smartsearchsingerMap">
+ 		select * from singerinfo where name like #{value}
+ 	</select>
+ 	<select id="smartsearchsong" resultMap="smartsearchMap">
+ 		select albuminfo.albumid,albuminfo.albumname,albuminfo.singer,albuminfo.publishtime,songlist.songname,albuminfo.style from albuminfo,songlist  where songlist.songname like #{value} and albuminfo.albumid=songlist.albumid
+ 	</select>
+    <select id="getcountbystyle" parameterType="String" resultType="int">
+ 		select count(*) from albuminfo where style=#{style}
+ 	</select>
+ 	  <select id="getcountbylanguage" parameterType="String" resultType="int">
+ 		select count(*) from albuminfo where language=#{language}
+ 	</select>
+ 	
+ 	
+	<resultMap id="itemMap" type="com.tedu.classes.item">
+		<result property="albumid" column="albumid" />
+		<result property="albumname" column="albumname" />
+		<result property="singer" column="singer" />
+		<result property="language" column="language"/>
+		<result property="style" column="style" />
+		<result property="region" column="region" />
+		<result property="publishcompany" column="publishcompany" />
+		<result property="intro" column="intro" />
+		<result property="price" column="price" />
+		<result property="storage" column="storage" />
+		<result property="sold" column="sold" />
+		<result property="wished" column="wished" />
+		<result property="discount" column="discount" />
+		<result property="publishtime" column="publishtime" />
+		<result property="picture" column="albumimage" />
+	</resultMap>
+	
+	<resultMap id="smartsearchMap" type="com.tedu.classes.smartsearchclass" >
+	    <result property="albumid" column="albumid"/>
+ 		<result property="song" column="songname"/> 	
+ 		<result property="albumname" column="albumname"/> 	
+ 		<result property="singer" column="singer"/>  
+ 		<result property="style" column="style"/> 
+ 		<result property="intro" column="intro"/>  
+ 		<result property="publishtime" column="publishtime"/> 
+ 		<result property="picture" column="image"/> 
+ 	</resultMap>
+ 	
+ 	<resultMap id="smartsearchsingerMap" type="com.tedu.classes.smartsearchclass" >	
+ 		<result property="singer" column="name"/>  
+ 		<result property="picture" column="image"/> 
+ 	</resultMap>
+
+
+</mapper>
+ 

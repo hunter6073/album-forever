@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+ <!-- mapper namespace="test"> 以下操作对应empdao接口中的所有操作-->
+
+ 
+  <mapper namespace="com.tedu.dao.indexMenuDao">
+ 	<select id="getnewalbums" resultMap="columnMap">
+ 		select * from albuminfo order by publishtime DESC
+ 	</select>
+ 	<select id="getdiscountrankings" resultMap="columnMap">
+ 		select * from albuminfo order by discount
+ 	</select>
+ 	<select id="getbestsellrankings" resultMap="columnMap">
+ 		select * from albuminfo order by sold DESC
+ 	</select>
+ 	<select id="getmostwishedrankings" resultMap="columnMap">
+ 		select * from albuminfo order by wished DESC
+ 	</select>
+ 
+ 	
+ 	<resultMap id="columnMap" type="com.tedu.classes.index_menu_album" >
+ 		<result property="albumid" column="albumid"/>
+ 		<result property="name" column="albumname"/> 	
+ 		<result property="singer" column="singer"/> 
+ 		<result property="img" column="albumimage"/> 
+ 		<result property="sold" column="sold"/> 
+ 	</resultMap>
+ 	
+ 	
+ 	<resultMap id="itemMap" type="com.tedu.classes.item" >
+ 		<result property="albumid" column="albumid"/>
+ 		<result property="albumname" column="albumname"/> 	
+ 		<result property="singer" column="singer"/> 
+ 		<result property="language" column="language"/> 
+ 		<result property="style" column="style"/> 
+ 		<result property="region" column="region"/> 
+ 		<result property="publishcompany" column="publishcompany"/> 
+ 		<result property="intro" column="intro"/> 
+ 		<result property="price" column="price"/> 
+ 		<result property="storage" column="storage"/> 
+ 		<result property="sold" column="sold"/> 
+ 		<result property="wished" column="wished"/> 
+ 		<result property="discount" column="discount"/> 
+ 		<result property="publishtime" column="publishtime"/> 
+ 		<result property="picture" column="albumimage"/> 
+ 	</resultMap>
+ 	
+ 	
+ 	
+ 	
+ </mapper>
+
+ 

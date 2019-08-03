@@ -1,0 +1,25 @@
+#body{
+	width:700px;
+	height:210px;
+	background:rgb(240,255,226);
+	border:2px solid rgb(188,188,188);
+	margin:150px auto 320px auto;
+	font-family:'Microsoft YaHei'
+	
+}
+#content{
+	width:500px;
+	height:150px;
+	margin:20px auto 0 auto;
+}
+#span1{
+	font-size:24px;
+}
+#span1 label{
+	color:red;
+}
+#content a{
+	font-size:12px;
+	text-decoration:none;
+	color:#436EEE;
+}

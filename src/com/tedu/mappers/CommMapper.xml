@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+ 
+ <mapper namespace="com.tedu.dao.CommDao">
+ 
+ 	<!--  查询当前专辑信息 -->
+ 	<select id="infors" parameterType="String" resultType="com.ssm.comm.Albums">
+ 		select * from albuminfo where albumid = #{albumid}
+ 	</select>
+ 	
+ 	<!-- 查询歌手其他专辑 -->
+ 	<select id="others" parameterType="String" resultType="com.ssm.comm.Albums">
+ 		select * from albuminfo where singer = #{singer}
+ 	</select>
+ 	
+ 	<!-- 查询所有评论 -->
+ 	<select id="searchComments" parameterType="String" resultType="com.ssm.comm.Comment">
+ 		select * from comment where albumid = #{albumid}
+ 	</select>
+ 	
+ 	<!-- 查询等级评论 -->
+ 	<select id="searchByRating" parameterType="com.ssm.comm.Comment" resultType="com.ssm.comm.Comment">
+ 		select * from comment where albumid = #{albumid} and (rating=#{rating} or rating = #{ratings})
+ 	</select>
+ 	
+ 	<!-- 加入订单 -->
+ 	<select id="insertorder" parameterType="com.ssm.comm.OrderLists">
+ 		insert into orderlist values(#{id},#{receiptid},#{albumid},#{subtotal},#{number})
+ 	</select>
+ 	
+ 	<!-- 加入购物车 -->
+ 	
+ 	<select id="insertcarlist" parameterType="com.ssm.comm.CarLists">
+ 		insert into cartlist(albumid,username,number) values(#{albumid},#{username},#{number})
+ 	</select>
+ 	
+ 	<!-- 查询购物车 -->
+ 	<select id="searchcarlist" parameterType="String" resultType="com.ssm.comm.CarLists">
+ 		select * from cartlist where username = #{username}
+ 	</select>
+ 	
+ 	<!-- 修改购物车 -->
+ 	<select id="updatecarlist" parameterType="com.ssm.comm.CarLists">
+ 		update cartlist set number = #{number} where albumid=#{albumid} and username=#{username}
+  	</select>
+ 	
+ 	<!-- 加入收藏  -->
+ 	<select id="insertwishlist" parameterType="com.ssm.comm.WishLists">
+ 		insert into wishlist(username,albumid) values(#{username},#{albumid})
+ 	</select>
+ 	
+ 	<!-- 查询收藏 -->
+ 	<select id="searchwishlist" parameterType="String" resultType="com.ssm.comm.WishLists">
+ 		select * from wishlist where username = #{username}
+ 	</select>
+ 	
+ 	<!-- 查询歌单 -->
+ 	<select id="searchsonglist" parameterType="String" resultType="com.ssm.comm.SongList">
+ 		select * from songlist where albumid = #{albumid}
+ 	</select>
+ 	<update id="setcartreceipt" parameterType="String">
+ 	   update cartlist set receiptid=#{0} where username=#{1} and albumid=#{2}
+ 	</update>
+ 	<update id="deletefromcart" parameterType="String">
+ 	  delete from cartlist where receiptid=#{0} 
+ 	</update>
+ 	
+ 	<!--<select id="searchsonglist" parameterType="String" resultMap="maps">
+ 		select * from songlist where albumid = #{albumid}
+ 	</select>
+ 	
+ 	<resultMap type="com.ssm.comm.SongList" id="maps">
+ 		<result property="id" column="id"/>
+ 		<result property="albumid" column="albumid"/>
+ 		<result property="songname" column="songname"/>
+ 	</resultMap>
+ 
+--></mapper>

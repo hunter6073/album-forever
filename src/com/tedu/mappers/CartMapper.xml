@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="com.tedu.dao.CartDao">
+	<!-- 获得购物车的信息 -->
+	<select id="findCart" parameterType="java.lang.String" resultType="com.tedu.entity.CartItem">
+		select cart.*,album.albumname,album.price,album.storage,album.albumimage 
+					from cartlist as cart 
+					inner join albuminfo as album on cart.albumid=album.albumid 
+					where cart.username = #{username}
+	</select>
+	<!-- 修改购物车中某一商品的数量 -->
+	<select id="modifyNumber" parameterType="com.tedu.entity.CartItem" resultType="String">
+		update cartlist set number=#{number} where username=#{username} and albumid=#{albumid}
+	</select>
+	<!-- 获得某一商品的数量 -->
+	<select id="getNumber" parameterType="com.tedu.entity.CartItem" resultType="int">
+		select number from cartlist where username=#{username} and albumid=#{albumid}
+	</select>
+	<!-- 删除购物车中某一条商品 -->
+	<select id="deleteCartItem" parameterType="com.tedu.entity.CartItem">
+		delete from cartlist where username=#{username} and albumid=#{albumid}
+	</select>
+	<!-- 根据username获取id -->
+	<select id="getID" parameterType="java.lang.String" resultType="java.lang.String">
+		select id from users where username=#{username}
+	</select>
+	<!-- 插入订单 -->
+	<select id="insertReceipt" parameterType="com.tedu.entity.Receipt">
+		insert into receipt(receiptid,username,status,total) values(#{receiptid},#{username},#{status},#{total})
+	</select>
+	<!-- 插入订单中的商品 -->
+	<select id="insertOrder" parameterType="java.util.List">
+		insert into orderlist(receiptid,albumid,number,subtotal) values
+		<foreach collection="list" item="item" index="index" separator="," >  
+        	(#{item.receiptid},#{item.albumid},#{item.number},#{item.subTotal})
+    	</foreach> 
+	</select>
+	<!-- 获得收货地址 -->
+	<select id="getAddress" parameterType="java.lang.String" resultType="com.tedu.entity.Address">
+		select * from addressinfo where username = #{username}
+	</select>
+	<!-- 获得订单商品 -->
+	<select id="findOrder" parameterType="java.lang.String" resultType="com.tedu.entity.OrderItem">
+		select orderl.*,album.albumname,album.price,album.albumimage 
+						from orderlist as orderl 
+						inner join albuminfo as album on orderl.albumid=album.albumid 
+						where orderl.receiptid = #{receiptid}	
+	</select>
+	<!-- 获得Receipt的总额total -->
+	<select id="getTotal" parameterType="java.lang.String" resultType="java.lang.Float">
+		select total from receipt where receiptid=#{receiptid}
+	</select>
+	<!-- 更新地址信息 -->
+	<select id="updateAddress" parameterType="com.tedu.entity.Address">
+		update addressinfo set address=#{address},receivename=#{receivename},phone=#{phone},postalcode=#{postalcode} 
+							where username=#{username}
+	</select>
+
+	<!-- 更新订单购买状态 -->
+	<select id="updateStatus" parameterType="map">
+		update receipt set status=#{status},pdate=#{pdate} where receiptid=#{receiptid}
+	</select>
+	<!-- 获得某一商品的存储量 -->
+	<select id="getStorage" parameterType="com.tedu.entity.CartItem" resultType="int">
+		select storage from albuminfo where albumid=#{albumid}
+	</select>
+	<!-- 获取订单中的商品编号列表 -->
+	<select id="findAlbumidFromOrder" parameterType="java.lang.String" resultType="com.tedu.entity.OrderItem">
+		select albumid,number from orderlist where receiptid = #{receiptid}	
+	</select>
+	<!-- 修改某一商品的存储量 -->
+	<select id="modifyStorage" parameterType="com.tedu.entity.OrderItem" resultType="String">
+		update albuminfo set storage=storage-#{number},sold=sold+#{number} where albumid=#{albumid}
+	</select>
+	
+	
+	
+	
+</mapper>

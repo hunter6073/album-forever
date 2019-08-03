@@ -1,0 +1,164 @@
+@CHARSET "UTF-8";
+
+body,h1,h2,h3,p,ol,ul,dl,dd,form{
+	margin: 0;
+	padding: 0;
+	font-size: 12px;
+}
+
+body {
+	background: url(../images/banner.png) repeat;
+}
+
+img {
+	border: none;
+}
+
+html {
+	font-family: "Microsoft Yahei";
+	background: url(../images/banner.png) repeat;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.logo_head {
+	background: url(../images/logo70hA.png);
+	width: 245px; 
+	height: 70px;
+	margin: 75px auto 15px;
+}
+
+.music_bg {
+	padding: 40px 0 0 0;
+	width: 1000px;
+	height: 600px;
+	margin: 0 auto;
+}
+
+.login_top {
+	width: 400px;
+	margin: 0 auto;
+	background: #e1e1e1;
+	border-radius: 25px 25px 0px 0px;
+	-webkit-border-radius: 25px 25px 0px 0px;
+	-moz-border-radius: 25px 25px 0px 0px;
+	-o-border-radius: 25px 25px 0px 0px;
+}
+
+.admin_login {
+	text-align: center;
+	font-size: 27px;
+	color: #62acdb;
+	padding: 20px 0 0 0;
+}
+
+.admin_infro {
+	padding: 10px 60px 10px 60px;
+	background: #e1e1e1;
+}
+
+.admin_infro .admin_username,.admin_infro .admin_password {
+	height: 36px;
+	border: 1px solid #e6e6e6;
+	border-radius: 2px;
+}
+
+.admin_infro .admin_username {
+	margin-top: 32px;
+	position: relative;
+}
+
+.admin_infro .admin_username input,.admin_infro .admin_password input {
+	float: left;
+	height: 36px;
+	width: 100%;
+	line-height: 34px;
+	border: 0;
+	color: #333;
+	font-family: "Microsoft Yahei";
+	padding: 0 15px 0 15px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+}
+
+.tips {
+	height: 30px;
+	line-height: 30px;
+	padding-left: 10px;
+	font-family: "Microsoft Yahei";
+	color: #6e6e6e;
+}
+
+.warn {
+	height: 30px;
+	line-height: 30px;
+	padding-left: 10px;
+	font-family: "Microsoft Yahei";
+	color: #f00000;
+}
+
+.admin_infro .error {
+	border-color: #f44700;
+	border: 1px solid #ff0000;
+}
+
+.admin_infro .btn #submitLoginBtn {
+	width: 100%;
+	border-radius: 5px;
+	color: #fff;
+	display: inline-block;
+	height: 44px;
+	cursor: pointer;
+	text-align: center;
+	font: normal 20px/ 44px "Microsoft Yahei";
+	background: #62acdb;
+}
+
+.admin_infro .btn #submitLoginBtn:hover {
+	background: #6290db;
+	text-decoration: none;
+}
+
+.login_bottom{
+	background: #62acdb;
+	width: 400px;
+	padding: 10px 0 10px 0;
+	margin: 0 auto;
+	border-radius: 0px 0px 25px 25px;
+	-webkit-border-radius: 0px 0px 25px 25px;
+	-moz-border-radius: 0px 0px 25px 25px;
+	-o-border-radius: 0px 0px 25px 25px;
+	text-align: center;
+	border-top: 2px solid #2d546d;	
+}
+
+.login_bottom a{
+	font-size: 20px;
+}
+
+#bottom_text{
+	color: #ffffff;
+}
+
+#bottom_a{
+	color: #2d546d;
+}
+
+.copyright {
+	padding: 150px 0px 0px 0px;
+	text-align: center;
+}
+
+.copyright p {
+	font-size: 15px;
+	font-weight: 400;
+	color: #fff;
+}

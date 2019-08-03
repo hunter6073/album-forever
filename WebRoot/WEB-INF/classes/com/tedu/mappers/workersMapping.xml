@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="com.tedu.dao.worker_manageDao">
+	
+	<select id="getallworkers" resultMap="workerMap">
+		select * from employee
+	</select>
+	<select id="getworkerbyId" resultMap="workerMap">
+		select * from employee where personid=#{value}
+	</select>
+	<select id="workerupdate" parameterType="com.tedu.classes.worker">
+		update employee set name=#{name},sex=#{sex},age=#{age},username=#{username},password=#{password},role=#{role} where personid=#{workerid}
+	</select>
+	<select id="workerinsert" parameterType="com.tedu.classes.worker">
+		insert into employee(personid,name,sex,age,username,password,role) values(#{workerid},#{name},#{sex},#{age},#{username},#{password},#{role} )
+	</select>
+	<select id="deleteworker" parameterType="com.tedu.classes.worker">
+		delete from employee where personid=#{workerid}
+	</select>
+
+	<resultMap id="workerMap" type="com.tedu.classes.worker">
+		<result property="workerid" column="personid" />
+		<result property="name" column="name"/>
+		<result property="sex" column="sex"/>
+		<result property="age" column="age"/>
+		<result property="username" column="username"/>
+		<result property="password" column="password"/>
+		<result property="role" column="role"/>
+		
+	</resultMap>
+
+
+</mapper>
+ 

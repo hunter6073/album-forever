@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+ 
+ <mapper namespace="com.tedu.dao.SingerDao">
+ 
+ 
+ 	<!--歌手分类查询-->
+ 	<select id="findAllSinger" resultMap="columnMap">
+ 		select name,image from singerinfo
+ 	</select> 	
+ 	<resultMap id="columnMap" type="com.tedu.entity.Singer_info" >
+ 		<result property="singer_name" column="name"/>
+ 		<result property="singer_image" column="image"/> 	
+ 	</resultMap> 
+ 	
+ 	<select id="findSingerByType" parameterType="String" resultMap="columnMap">
+ 		select name,image from singerinfo where type = #{Type}
+ 	</select>
+ 	<select id="findSingerByWord" parameterType="String" resultMap="columnMap">
+ 		select name,image from singerinfo where keyword = #{word}
+ 	</select>
+ 	
+ 	<!--专辑分类查询-->
+ 	<select id="findAllAlbum" resultMap="AlbumMap">
+ 		select albumname,singer,albumimage from albuminfo
+ 	</select>
+ 	<select id="findAlbumByLanguage" resultMap="AlbumMap">
+ 		select albumname,singer,albumimage from albuminfo where language = #{language}
+ 	</select>
+ 	<select id="findAlbumByRegion" resultMap="AlbumMap">
+ 		select albumname,singer,albumimage from albuminfo where region = #{region}
+ 	</select>
+ 	<select id="findAlbumByStyle" resultMap="AlbumMap">
+ 		select albumname,singer,albumimage from albuminfo where style = #{style}
+ 	</select>
+ 	
+ 	<select id="findAlbumByPrice" resultMap="AlbumMap">
+ 		 <![CDATA[ select albumname,singer,albumimage from albuminfo where price>=#{0} && price <#{1}]]>
+  	</select>
+  	<resultMap id="AlbumMap" type="com.tedu.entity.Album_info">
+ 		<result property="album_name" column="albumname"/>
+ 		<result property="album_image" column="albumimage"/>
+ 		<result property="album_singer" column="singer"/>
+ 		<result property="album_albumid" column="albumid"/>
+ 		<result property="album_price" column="price"/>
+ 	</resultMap>
+  	
+  	
+  	<!--歌手详情查询-->
+  	<select id="findAlbumBySinger" resultMap="AlbumMap">
+ 		select * from albuminfo where singer = #{singername}	
+ 	</select>
+ 	
+ 	<select id="ListSingerInfo" resultMap="SingerMap">
+ 		select * from singerinfo where name = #{singername}
+ 	</select>
+ 	<resultMap id="SingerMap" type="com.tedu.entity.Singer_info">
+ 		<result property="singer_name" column="name"/>
+ 		<result property="singer_image" column="image"/>
+ 		<result property="singer_intro" column="intro"/>
+ 	</resultMap>
+ 	
+ 	<!--排行榜分类查询-->
+ 	
+ 	<!-- 销量排行榜查询-->
+ 	<select id="RankingBySold" resultMap="RankingMap">
+ 		select * from albuminfo order by sold DESC
+ 	</select>
+ 	<!-- 收藏排行榜查询 -->
+ 	<select id="RankingByWish" resultMap="RankingMap">
+ 		select * from albuminfo order by wished DESC
+ 	</select>
+ 	<!-- 折扣排行榜查询 -->
+ 	<select id="RankingByDiscount" resultMap="RankingMap">
+ 		select * from albuminfo order by discount ASC
+ 	</select>
+ 	<!-- 新歌排行榜查询 -->
+ 	<select id="RankingByPublishtime" resultMap="RankingMap">
+ 		select * from albuminfo order by publishtime DESC
+ 	</select>
+ 	
+ 	<resultMap type="com.tedu.entity.Album_info" id="RankingMap">
+ 		<result property="album_name" column="albumname"/>
+ 		<result property="album_image" column="albumimage"/>
+ 		<result property="album_singer" column="singer"/>
+ 		<result property="album_price" column="price"/>
+ 		<result property="album_publishtime" column="publishtime" />
+ 		<result property="album_albumid" column="albumid" />
+ 	</resultMap>
+ 	
+ 	
+ 	
+ </mapper>

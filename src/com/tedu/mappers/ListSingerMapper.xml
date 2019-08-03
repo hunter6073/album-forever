@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+ 
+ 
+ <mapper namespace="com.tedu.dao.ListSingerDao">
+ 	
+ 	<select id="ListSinger" parameterType="com.tedu.entity.Singer_info" resultMap="SingerMap">
+ 		select name,image from singerinfo where 1=1
+ 			<if test="singer_type!=null">
+ 				and	type = #{singer_type}
+ 			</if>
+ 			<if test="singer_keyword!=null">
+ 				and keyword = #{singer_keyword}
+ 			</if>
+ 	</select>
+ 	
+  	<resultMap id="SingerMap" type="com.tedu.entity.Singer_info">
+ 		<result property="singer_name" column="name"/>
+ 		<result property="singer_image" column="image"/>
+ 	</resultMap>
+ </mapper>

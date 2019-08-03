@@ -1,0 +1,144 @@
+@CHARSET "UTF-8";
+body{
+	text-align: center;
+	}
+
+div.songarea{
+
+	border: 0px solid black;
+	margin: 0 auto;
+	min-height: 200px;
+	width: 1200px;
+	text-align: center;
+	overflow: hidden;
+	/*background-image: url("../images/bc017.jpg");*/
+
+}
+
+div.songlist{
+	border: 0px solid green;
+	width: 100%;
+	overflow: hidden;
+	}
+
+div.songlistbox{
+	float: left;
+	border-right: 1px white;
+	min-width: 500px;
+	max-width: 750px;
+	min-height: 399px;
+	}
+	
+ul.songlistheader{
+	width: 700px;
+	height: 45px;
+	margin-bottom: 1px;
+	margin-right: 0px;
+	}
+	
+li.songbar{
+	float: left;
+	width: 80px;
+	margin-left: 5px;
+	border: 1px solid white;
+	height: 25px;
+	text-align: center;
+	font-size: 20px;
+	font-family: '仿宋';
+	color: #999;
+	
+	}
+	
+tr.songlisttr{
+	margin-left: 50px;
+	}
+	
+td.songlisttd{
+	margin-left: 50px;
+	height: 30px;
+	}
+	
+table{
+	margin-left: 50px;
+	}
+
+#songsinglename{
+	width: 260px;
+	overflow: hidden;
+	}
+	
+div.song_infors{
+	float:left;
+    text-align:left;
+	width: 100px;
+	margin-left: 5px;
+	}
+	
+#a_wish{
+	color: #999;
+	text-decoration: none;
+	}
+
+#timeinfor{
+	float: right;
+	}
+	
+#timeinfors{
+	margin-right:150px;
+	float: right;
+	}
+	
+#tr_bar{
+	margin-bottom: 50px;
+	padding-bottom: 50px;
+	}
+	
+#time{
+	margin-right: 220px;
+	float: right;
+	}
+	
+#intro_p{
+	float: left;
+	}
+	
+ul.songall{
+	}
+	
+li.songsingle{
+	}
+	
+#timeinfor{
+	margin-left:30px;
+	margin-right: 150px;
+	float: right;
+	}
+	
+div.songlyric{
+	float:left;
+	border: 0px solid red;
+	min-width: 400px;
+	max-width: 450px;
+	margin: 2px;
+	margin-top:0px;
+	min-height:300px;
+	/*background-image: url("../images/bc006.gif");*/
+	
+	}
+	
+div.songinfo{
+	margin: 10px;
+	border: 0px solid black;
+	}
+	
+div.lyric{
+	margin: 10px;
+	border: 0px solid black;
+	}
+	
+div.songplayer{
+	border: 1px solid red;
+	float: left;
+	width: 100%;
+	min-height: 80px;
+	}

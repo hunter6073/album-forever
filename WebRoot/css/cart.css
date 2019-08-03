@@ -1,0 +1,187 @@
+div{
+	margin:0;
+	padding:0;
+}
+#body{
+	width:1200px;
+	margin:0 auto;
+}
+#header{
+	height:100px;
+	width:100%;
+}
+#content{
+	width:100%;
+}
+#content_head{
+	width:100%;
+	height:80px;
+}
+#content_body{
+	width:80%;
+	margin:0 auto;
+}
+#content_body_location{
+	font-family:'Microsoft YaHei';
+	font-size:15px;
+	height:30px;
+}
+#content_body_location a{
+	text-decoration:none;
+	color:#436EEE;
+}
+#content_body_location a:hover{
+	color:red;
+}
+ul{
+	margin:0;
+	padding:0;
+	float:left;
+	position:relative;
+	left:160px;
+}
+ul li{
+	float:left;
+}
+.loadingContent1{
+	width:1000px;
+	height:400px;
+	margin-left:20px;
+}
+.loadingContent2{
+	width:1000px;
+	margin-left:20px;
+}
+table{
+	border-collapse:collapse;
+}
+table thead tr{
+	display:block;
+    margin:20px 0;
+}
+table thead tr th{
+	font-family:'Microsoft YaHei';
+	font-size:16px;
+	text-align:center;
+}
+table tbody tr{
+	font-family:'Microsoft YaHei';
+	font-size:15px;
+	height:80px;
+	border:1px outset #FFFFF0;
+	display:block;
+    margin:4px 0;
+}
+table tbody tr td{
+	height:80px;
+	
+}
+table tbody tr td a{
+	text-decoration:none;
+	color:black;
+}
+.td1{
+	width:80px;
+	text-align:center;
+}
+.td2{
+	width:350px;
+}
+.td3{
+	width:100px;
+	text-align:center;
+}
+.td4{
+	width:150px;
+	text-align:center;
+}
+.td5{
+	width:140px;
+	text-align:center;
+}
+.td6{
+	width:100px;
+	text-align:center;
+}
+.image{
+	width:65px;
+	height:60px;
+	position:absolute;
+	margin-left:50px;
+	margin-top:10px;
+}
+table tbody tr td img{
+	width:100%;
+	height:100%;
+}
+#goodName{
+	margin-left:140px;
+	margin-top:12px;
+	width:180px;
+	height:65px;
+	overflow-y:hidden;
+	word-break:break-all;
+}
+.numberInput{
+	width:40px;
+	height:25px;
+	text-align:center;	
+}
+.numberMinus{
+	width:20px;
+	height:25px;
+	text-align:center;
+	position:relative;
+	left:4px;
+	background:#EDEDED;
+	border:#f0f0f0 solid 1px;
+	outline:0;e
+}
+.numberPlus{
+	width:20px;
+	height:25px;
+	text-align:center;
+	position:relative;
+	right:4px;
+	background:#EDEDED;
+	border:#f0f0f0 solid 1px;
+	outline:0;
+}
+input.numberMinus:hover{
+    border:#FF8C69 1px solid;
+    cursor:pointer;
+}
+input.numberplus:hover{
+    border:#FF8C69 1px solid;
+    cursor:pointer;
+}
+#totalContent{
+	height:50px;
+	width:934px;
+	margin-top:5px;
+	
+	background-color:#e5e5e5;
+	text-align:right;
+	font-family:'Microsoft YaHei';
+	font-size:16px;
+}
+#totalContent label{
+	color:red;
+	font-size:18px;
+}
+#totalContent input{
+	width:100px;
+	height:40px;
+	margin-left:10px;
+	margin-top:5px;
+	margin-right:20px;
+	text-align:center;
+	font-family:'Microsoft YaHei';
+	font-size:16px;
+	cursor:pointer;
+}
+div p{
+	position:relative;
+	top:100px;
+	left:150px;
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="com.tedu.dao.user_manageDao">
+	
+	<select id="getallusers" resultMap="userMap">
+		SELECT *FROM users LEFT JOIN addressinfo ON users.username=addressinfo.username
+	</select>
+	
+	<select id="getusersbyUsername" resultMap="userMap">
+	    SELECT  users.mailaddress, users.username,addressinfo.receivename,addressinfo.phone,addressinfo.address,users.lastloginip,users.lastlogintime
+        FROM users, addressinfo WHERE users.username = addressinfo.username and addressinfo.username=#{username}
+	</select>
+
+	<resultMap id="userMap" type="com.tedu.classes.user">
+		<result property="usermail" column="mailaddress" />
+		<result property="username" column="username" />
+		<result property="password" column="password" />
+		<result property="name" column="receivename" />
+		<result property="recentphone" column="phone" />
+		<result property="recentaddress" column="address" />
+		<result property="lastlogintime" column="lastlogintime"/>
+		<result property="lastloginip" column="lastloginip" />
+		
+	</resultMap>
+
+
+</mapper>
+ 
